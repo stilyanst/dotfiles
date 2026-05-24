@@ -23,11 +23,15 @@ source ~/zsh_plugins/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
+PATH="$PATH:$HOME/.local/bin"
+
+
+
 # ============================================================
 # 2. VI MODE & KEYBINDINGS
 # ============================================================
-bindkey -v
-KEYTIMEOUT=10   # 100 ms delay for multi-key sequences (e.g. ESC)
+# bindkey -v
+# KEYTIMEOUT=10   # 100 ms delay for multi-key sequences (e.g. ESC)
 
 
 # ============================================================
