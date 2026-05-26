@@ -1,4 +1,5 @@
 -- Key mappings
+-- 
 vim.g.mapleader = " "                              -- Set leader key to space
 vim.g.maplocalleader = " "                         -- Set local leader key (NEW)
 
@@ -50,7 +51,6 @@ vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
 -- Quick file navigation
 vim.keymap.set("n", "<leader>e", ":Explore<CR>", { desc = "Open file explorer" })
-vim.keymap.set("n", "<leader>ff", ":find ", { desc = "Find file" })
 
 -- Better J behavior
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
@@ -150,3 +150,21 @@ vim.keymap.set('n', '<leader>pr', function()
   vim.fn.setreg('+', path)
   print('Relative path: ' .. path)
 end, { desc = 'Copy relative file path' })
+
+
+
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Go to references" })
+vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover docs" })
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action" })
+vim.keymap.set("n", "<leader>fo", vim.lsp.buf.format, { desc = "Format file" })
+vim.keymap.set("i", "<C-k>", function()
+  require("blink.cmp").show_documentation()
+end, { desc = "Show completion docs" })
+-- Diagnostics
+vim.keymap.set("n", "gl", vim.diagnostic.open_float, { desc = "Show diagnostic" })
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
