@@ -1,4 +1,3 @@
--- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#942341", fg = "#674921" })
 -- vim.api.nvim_set_hl(0, "Pmenu", { bg = "#aaa4a5", fg="#4444ff"})
 -- vim.api.nvim_set_hl(0, "PmenuShadow", {bg = "#336688", fg="#774455"})
 -- Basic settings
@@ -10,9 +9,9 @@ vim.opt.scrolloff = 10                             -- Keep 10 lines above/below 
 vim.opt.sidescrolloff = 8                          -- Keep 8 columns left/right of cursor
 
 -- Indentation
-vim.opt.tabstop = 2                                -- Tab width
-vim.opt.shiftwidth = 2                             -- Indent width
-vim.opt.softtabstop = 2                            -- Soft tab stop
+vim.opt.tabstop = 4                                -- Tab width
+vim.opt.shiftwidth = 4                             -- Indent width
+vim.opt.softtabstop = 4                            -- Soft tab stop
 vim.opt.expandtab = true                           -- Use spaces instead of tabs
 vim.opt.smartindent = true                         -- Smart auto-indenting
 vim.opt.autoindent = true                          -- Copy indent from current line

@@ -7,9 +7,22 @@ vim.pack.add({
   'https://github.com/nvim-telescope/telescope.nvim',
   'https://github.com/nvim-lua/plenary.nvim',
   "https://github.com/lewis6991/gitsigns.nvim",
+  "https://github.com/mfussenegger/nvim-jdtls",
+})
+vim.pack.add({
+  "https://github.com/ellisonleao/gruvbox.nvim",
+})
+vim.pack.add({
+    "https://github.com/maxmx03/solarized.nvim"
+})
+require("gruvbox").setup({
+  contrast = "hard",
 })
 
-vim.cmd.colorscheme("tokyonight-night")
+-- vim.o.background = "dark"
+vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme solarized")
+-- vim.cmd.colorscheme("tokyonight-night")
 
 require('nvim-treesitter.config').setup({
   ensure_installed = { "lua", "vim", "vimdoc", "java", "python",
@@ -61,6 +74,20 @@ vim.lsp.enable('lua_ls')
 vim.lsp.enable('clangd')
 vim.lsp.enable('pyright')
 
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = 'java',
+    callback = function(args)
+        require('plugins.jdtls_setup').setup()
+    end
+})
+
+require("telescope").setup({
+    pickers = {
+        find_files = {
+            hidden = true,
+        },
+    }
+})
 local builtin = require('telescope.builtin')
 
 -- Keybinds

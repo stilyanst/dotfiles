@@ -1,14 +1,6 @@
 # ============================================================
 # ~/.zshrc
 # ============================================================
-# Maintenance rules:
-#   1. Keep sections in the order defined here (order matters).
-#   2. Add new aliases to the ALIASES section only.
-#   3. Add new env vars to ENV VARS section only.
-#   4. New plugins go after compinit, never before.
-#   5. Run `exec zsh` to reload without opening a new terminal.
-# ============================================================
-
 
 # ============================================================
 # 1. POWERLEVEL10K — INSTANT PROMPT
@@ -24,8 +16,6 @@ source ~/zsh_plugins/powerlevel10k/powerlevel10k.zsh-theme
 
 
 PATH="$PATH:$HOME/.local/bin"
-
-
 
 # ============================================================
 # 2. VI MODE & KEYBINDINGS
@@ -137,3 +127,7 @@ alias pokerth-hres="QT_SCALE_FACTOR=1.6 pokerth"
 # Remap Caps Lock → Escape / Shift+Caps Lock → Caps Lock:
 #   gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape_shifted_capslock']"
 #
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
