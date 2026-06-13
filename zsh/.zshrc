@@ -16,6 +16,10 @@ source ~/zsh_plugins/powerlevel10k/powerlevel10k.zsh-theme
 
 
 PATH="$PATH:$HOME/.local/bin"
+setopt IGNORE_EOF
+export IGNOREEOF=10 # Make us press Ctrl+d 10 times to preven
+                    # accidental closing of the session
+
 
 # ============================================================
 # 2. VI MODE & KEYBINDINGS
@@ -82,7 +86,8 @@ export FZF_DEFAULT_COMMAND='fd \
   --exclude .git \
   --exclude .cache \
   --exclude .steam \
-  --exclude ".local/share/JetBrains/Toolbox/scripts/clion"'
+  --exclude ".local/share/JetBrains/Toolbox/scripts/clion" \
+  --exclude ".local/share/Zeal" '
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
