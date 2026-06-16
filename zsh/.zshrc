@@ -85,7 +85,7 @@ export FZF_DEFAULT_COMMAND='fd \
   --exclude node_modules \
   --exclude .git \
   --exclude .cache \
-  --exclude .steam \
+  --exclude .steam/ \
   --exclude ".local/share/JetBrains/Toolbox/scripts/clion" \
   --exclude ".local/share/Zeal" '
 

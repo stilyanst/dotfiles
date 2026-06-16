@@ -73,6 +73,7 @@ require('blink.cmp').setup({
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('clangd')
 vim.lsp.enable('pyright')
+vim.lsp.enable('ruff')
 
 vim.api.nvim_create_autocmd('FileType', {
     pattern = 'java',
