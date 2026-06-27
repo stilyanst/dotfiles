@@ -85,13 +85,12 @@ export FZF_DEFAULT_COMMAND='fd \
   --exclude node_modules \
   --exclude .git \
   --exclude .cache \
-  --exclude .steam/ \
-  --exclude ".local/share/JetBrains/Toolbox/scripts/clion" \
-  --exclude ".local/share/Zeal" '
+  --exclude .steam \
+  --exclude clion \
+  --exclude Zeal '
 
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
-
+export FZF_ALT_C_COMMAND="fd --type=d --hidden --exclude .git --exclude .cache --exclude .steam --exclude Zeal --exclude clion"
 
 # ============================================================
 # 8. ALIASES & FUNCTIONS
