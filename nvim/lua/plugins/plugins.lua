@@ -8,6 +8,7 @@ vim.pack.add({
   'https://github.com/nvim-lua/plenary.nvim',
   "https://github.com/lewis6991/gitsigns.nvim",
   "https://github.com/mfussenegger/nvim-jdtls",
+  "https://github.com/akinsho/toggleterm.nvim"
 })
 vim.pack.add({
   "https://github.com/ellisonleao/gruvbox.nvim",
@@ -107,3 +108,20 @@ require("gitsigns").setup({
       changedelete = { text = "~" },
 }
 })
+
+require("toggleterm").setup({
+    open_mapping = [[<c-\>]],
+    direction = "float",
+    shade_terminals = false,
+    start_in_insert = true,
+    insert_mappings = true,
+    float_opts = {
+        border = "rounded",
+    },
+})
+
+-- toggle terminal
+-- vim.keymap.set("n", "<C-\\>", "<cmd>ToggleTerm<cr>")
+
+-- exit terminal mode
+-- vim.keymap.set("t", "jk", [[<C-\><C-n>]])
