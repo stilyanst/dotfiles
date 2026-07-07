@@ -35,6 +35,7 @@ require('nvim-treesitter.config').setup({
 })
 
 require('mason').setup()
+-- Need to run: :MasonInstall lua-language-server clangd pyright ruff bash-language-server jdtls shfmt shellcheck
 
 require('blink.cmp').setup({
     -- 'default' (recommended) for mappings similar to built-in completions (C-y to accept)
@@ -75,6 +76,7 @@ vim.lsp.enable('lua_ls')
 vim.lsp.enable('clangd')
 vim.lsp.enable('pyright')
 vim.lsp.enable('ruff')
+vim.lsp.enable("bashls")
 
 vim.api.nvim_create_autocmd('FileType', {
     pattern = 'java',
