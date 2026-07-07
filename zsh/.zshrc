@@ -6,6 +6,7 @@
 # 1. POWERLEVEL10K — INSTANT PROMPT
 #    Must stay at the very top. Nothing that writes to stdout
 #    or reads a password should appear before this block.
+#    git@github.com:romkatv/powerlevel10k.git
 # ============================================================
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -62,6 +63,8 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # ============================================================
 # 6. PLUGINS
 #    Load after compinit so they can register completions.
+#    git@github.com:marlonrichert/zsh-autocomplete.git
+#    git@github.com:zsh-users/zsh-syntax-highlighting.git 
 # ============================================================
 source ~/zsh_plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

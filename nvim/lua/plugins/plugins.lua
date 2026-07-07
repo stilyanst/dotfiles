@@ -124,4 +124,4 @@ require("toggleterm").setup({
 -- vim.keymap.set("n", "<C-\\>", "<cmd>ToggleTerm<cr>")
 
 -- exit terminal mode
--- vim.keymap.set("t", "jk", [[<C-\><C-n>]])
+vim.keymap.set("t", "jk", [[<C-\><C-n>]])
