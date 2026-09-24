@@ -20,6 +20,8 @@ require("gruvbox").setup({
   contrast = "hard",
 })
 
+vim.cmd("packadd nvim.tohtml")
+
 -- vim.o.background = "dark"
 vim.cmd("colorscheme gruvbox")
 -- vim.cmd("colorscheme solarized")
