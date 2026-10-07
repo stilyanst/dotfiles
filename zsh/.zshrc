@@ -42,6 +42,11 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=$HISTSIZE
 
+#setopt inc_append_history    # write each command to history immediately
+#setopt append_history        # append history without overriding other zsh session's history
+# share_history does the things that inc_append_history and append_history do
+setopt share_history         # incrementally write and import history from other zsh sessions
+
 setopt hist_ignore_all_dups  # deduplicate on write
 setopt hist_save_no_dups     # deduplicate on save
 setopt hist_ignore_dups      # deduplicate consecutive entries
